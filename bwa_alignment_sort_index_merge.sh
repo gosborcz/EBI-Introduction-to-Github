@@ -2,6 +2,7 @@
 
 for n in {1..2}
 do
+	bwa index Saccharomyces_cerevisiae.EF4.68.dna.toplevel.fa	
 	bwa mem -R '@RG\tID:'"$n"'\tLB:library\tPL:Illumina\tPU:lane'"$n"'\tSM:yeast' \
 	Saccharomyces_cerevisiae.EF4.68.dna.toplevel.fa \
 	lane$n/s-7-1.trim.paired.fastq lane$n/s-7-2.trim.paired.fastq | \
